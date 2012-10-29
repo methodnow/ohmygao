@@ -1,0 +1,5 @@
+$('body').animate({'background-position-x':'100%'},1000);
+$('.maincontent').fadeOut().html('<%= escape_javascript render 'index' %>').fadeIn(1000);
+<% unless params[:history].present? %>
+  History.pushState({url: "/"},"哦买膏 | Oh My Gao","/");
+<% end %>

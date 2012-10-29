@@ -1,0 +1,4 @@
+$('.maincontent').fadeOut().html('<%= escape_javascript render 'order' %>').fadeIn(1000);
+<% unless params[:history].present? %>
+  History.pushState({url: "/howtoorder"},"哦买膏 | Oh My Gao","/howtoorder");
+<% end %>

@@ -1,0 +1,4 @@
+$('.maincontent').fadeOut().html('<%= escape_javascript render 'inside' %>').fadeIn(1000);
+<% unless params[:history].present? %>
+  History.pushState({url: "/whatisinside"},"哦买膏 | Oh My Gao","/whatisinside");
+<% end %>

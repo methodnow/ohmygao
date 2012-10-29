@@ -1,0 +1,18 @@
+---
+applications:
+  ~/Projects/ohmygao:
+    name: OhMyGao
+    framework:
+      name: standalone
+      info:
+        mem: 64M
+        description: Standalone Application
+        exec: 
+    runtime: ruby19
+    command: rake assets:precompile
+    url: http://ohmygao.com
+    mem: 1G
+    instances: 1
+    services:
+      OMGDB:
+        type: mysql

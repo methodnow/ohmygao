@@ -1,0 +1,299 @@
+@import compass/css3
+body
+  font-family: 'MuseoSans500'
+
+@media (min-width: 979px)
+  body
+    padding-top: 96px
+
+@media (max-width: 979px) and (min-width: 768px)
+  .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container
+    width: 960px
+  .span12
+    width: 960px
+
+.navbar
+  .nav
+    li
+      position: relative
+      top: 0px
+      height: 94px
+      &:hover
+        background: #C90035
+        .nav-text
+          height: 125px
+          background: #C90035
+          +box-shadow(white 0 0 0, #FAA 0 -3px 1px inset)
+          +border-radius(0px 0px 7px 7px)
+          a
+            color: white
+          .chinese
+            +opacity(1)
+      .nav-text
+        +transition(0.5s)
+        width: auto
+        height: 94px
+        margin: auto
+        a
+          padding-left: 18px
+          font-size: 28px
+          line-height: 28px
+          color: #C90035
+          padding-bottom: 24px
+          position: absolute
+          bottom: 0px
+          text-decoration: none
+          text-transform: uppercase
+        .chinese
+          margin-top: 10px
+          position: absolute
+          +opacity(0)
+          font-size: 19px
+    .nav-about
+      margin-left: 10px
+      width: 132px
+      .nav-text
+        width: 132px
+        a
+          .larger
+            font-size: 39px
+    .nav-what
+      width: 175px
+      .nav-text
+        width: 175px
+        a
+          .larger
+            font-size: 39px
+          .chinese
+            font-size: 20px
+    .nav-why
+      width: 165px
+      .nav-text
+        width: 165px
+        a
+          .larger
+            font-size: 39px
+          .chinese
+            font-size: 21px
+    .nav-how
+      width: 185px
+      .nav-text
+        width: 185px
+        a
+          .larger
+            font-size: 39px
+          .chinese
+            font-size: 28px
+
+@media (min-width: 1200px)
+  .container
+    .brand
+      padding: 5px 10px 5px
+  .hero-unit.ohmyhero
+    padding-top: 80px
+    +border-radius(0px 0px 7px 7px)
+    .introtext, .abouttext
+      text-align: justify
+      h4
+        text-transform: uppercase
+        span
+          font-size: 22px
+          color: #C90035
+    &.index
+      .intro2
+        h4
+          font-size: 25px
+          span
+            font-size: 34px
+        font-size: 26px
+        line-height: 27px
+
+      .introhead
+        h1
+          .top
+            font-size: 36px
+          .bot
+            font-size: 41px
+            color: #C90035
+    &.about
+      .about1
+        h4
+          font-size: 20px
+          span
+            font-size: 20px
+      .about2
+        h4
+          font-size: 25px
+        font-size: 23px
+        line-height: 24px
+      .abouthead
+        h1
+          .top
+            line-height: 40px
+          .bot
+            line-height: 40px
+            font-size: 36px
+            color: #C90035
+            padding-bottom: 10px
+          .chi
+            font-size: 40px
+            span
+              color: #C90035
+    &.inside
+      .inside1
+      .insidehead
+        h1
+          .top
+            font-size: 50px
+          .bot
+            color: #C90035
+          .chi-top
+            font-size: 68px
+          .chi-bot
+            font-size: 83px
+            color: #C90035
+    &.why
+      .why1
+      .why2
+      .whyhead
+        h1
+          .top
+            font-size: 65px
+          .bot
+            font-size: 55px
+            color: #C90035
+          .chi
+            font-size: 80px
+            color: #C90035
+    &.order
+      .orderhead
+        h1
+          font-size: 45px
+          .top
+            font-size: 40px
+          .bot
+            font-size: 52px
+            color: #C90035
+
+.hero-unit.ohmyhero
+  margin-top: -3px
+  padding: 30px
+  background-color: rgba(240,240,240,0.6)
+  +box-shadow(#DDD 0px 2px 1px)
+  h1
+    text-transform: uppercase
+
+span.brand
+  text-transform: uppercase
+  font-weight: bold
+  color: #C90035
+  word-spacing: 0px
+span.brand.chinese
+  font-weight: normal
+  word-spacing: 0px
+  letter-spacing: 0px
+  font-size: 24px
+
+span.label.chi
+  font-size: 16px
+  font-weight: normal
+  text-shadow: none
+  padding-top: 2px
+
+.prod-desc
+  font-size: 12px
+  line-height: 16px
+
+.order-add
+  text-align: right
+
+.maincontent
+  min-height: 480px
+
+@media (max-width: 1199px)
+  .hero-unit.ohmyhero
+    .introtext, .abouttext
+      text-align: justify
+      h4
+        text-transform: uppercase
+        span
+          font-size: 20px
+          color: #C90035
+    &.index
+      .intro1
+        h4
+          font-size: 14px
+      .intro2
+        h4
+          font-size: 20px
+          span
+            font-size: 34px
+        font-size: 20px
+        line-height: 24px
+
+      .introhead
+        h1
+          .top
+            font-size: 29px
+          .bot
+            font-size: 33px
+            color: #C90035
+          .chi
+            font-size: 50px
+    &.about
+      .about1
+        h4
+          font-size: 18px
+          span
+            font-size: 20px
+      .about2
+        h4
+          font-size: 25px
+        font-size: 21px
+        line-height: 24px
+      .abouthead
+        h1
+          .top
+            font-size: 56px
+            line-height: 40px
+          .bot
+            line-height: 40px
+            font-size: 33px
+            color: #C90035
+            padding-bottom: 10px
+          .chi
+            font-size: 38px
+            span
+              color: #C90035
+    &.inside
+      .inside1
+      .insidehead
+        h1
+          .top
+            font-size: 38px
+          .bot
+            color: #C90035
+            font-size: 42px
+          .chi-top
+            font-size: 50px
+          .chi-bot
+            font-size: 44px
+            color: #C90035
+    &.order
+      .orderhead
+        h1
+          .top
+            font-size: 40px
+  span.brand
+    text-transform: uppercase
+    font-weight: bold
+    color: #C90035
+    word-spacing: -6px
+  span.brand.chinese
+    font-weight: normal
+    word-spacing: 0px
+    letter-spacing: 0px
+
+
+
+

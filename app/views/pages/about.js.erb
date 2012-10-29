@@ -1,0 +1,4 @@
+$('.maincontent').hide().html('<%= escape_javascript render 'about' %>').fadeIn(1000);
+<% unless params[:history].present? %>
+History.pushState({url: "/aboutomg"}, document.title,"/aboutomg");
+<% end %>

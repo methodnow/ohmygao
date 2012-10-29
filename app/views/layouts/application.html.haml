@@ -1,0 +1,81 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(name="google" content="notranslate")
+    %meta(http-equiv="Content-language" content="en")
+    %title= content_for?(:title) ? yield(:title) : "哦买膏 | Oh My Gao"
+    = csrf_meta_tags
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    = stylesheet_link_tag "application", :media => "all"
+    %link(href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144")
+    %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
+    %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
+    %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
+    %link(href="images/favicon.ico" rel="shortcut icon")
+
+
+  %body{class: params[:action] }
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to image_tag('/omg-logo.gif'), root_path, class: "brand", remote: true
+          .container.nav-collapse
+            %ul.nav
+              %li.nav-about
+                .nav-text
+                  = link_to about_path, remote: true do
+                    About
+                    %br
+                    %span.larger OMG
+                    .chinese.notranslate
+                      關於哦買膏
+              %li.nav-what
+                .nav-text
+                  = link_to inside_path, remote: true do
+                    What Is
+                    %br
+                    %span.larger INSIDE?
+                    .chinese.notranslate
+                      它包含了什麼？
+
+              %li.nav-why
+                .nav-text
+                  = link_to why_path, remote: true do
+                    Why
+                    %br
+                    %span.larger Eat It?
+                    .chinese.notranslate
+                      吃它來幹嘛？
+
+              %li.nav-how
+                .nav-text
+                  = link_to order_path, remote: true do
+                    How Do I
+                    %br
+                    %span.larger Order?
+                    .chinese.notranslate
+                      怎麼訂購？
+    .container
+      .content
+        .row
+          .span12
+            = yield :flash
+            .maincontent= yield
+
+      %footer
+        %p &copy; 哦買膏 Oh My Gao 2012
+    /
+      Javascripts
+      \==================================================
+    / Placed at the end of the document so the pages load faster
+    = javascript_include_tag "application"
+    = yield :javascript

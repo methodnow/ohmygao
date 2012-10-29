@@ -1,0 +1,6 @@
+= render 'about'
+- content_for :javascript do
+  :javascript
+    $(document).ready(function(){
+      History.pushState({url: document.location.href},document.title,"/aboutomg");
+    });
