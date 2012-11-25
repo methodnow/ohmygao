@@ -1,4 +1,5 @@
 $('.maincontent').hide().html('<%= escape_javascript render 'why' %>').fadeIn(1000);
+$('body').removeClass('about why order inside index').addClass('<%= params[:action] %>');
 <% unless params[:history].present? %>
   History.pushState({url: "/whyeatit"},"哦买膏 | Oh My Gao","/whyeatit");
 <% end %>

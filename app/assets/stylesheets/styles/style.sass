@@ -1,6 +1,15 @@
 @import compass/css3
 body
   font-family: 'MuseoSans500'
+  &.index
+    background-image: url('/bg1.jpg')
+    background-position: top
+  &.inside
+    background-image: url('/bg3.jpg')
+    background-position: center top
+  &.about
+    background-image: url('/bg2.jpg')
+    background-position: right top
 
 @media (min-width: 979px)
   body
@@ -74,7 +83,7 @@ body
           .larger
             font-size: 39px
           .chinese
-            font-size: 21px
+            font-size: 18px
     .nav-how
       width: 185px
       .nav-text
@@ -84,6 +93,10 @@ body
             font-size: 39px
           .chinese
             font-size: 28px
+.chi-text
+  font-size: 16px
+  &.larger
+    font-size: 19px
 
 @media (min-width: 1200px)
   .container
