@@ -5,12 +5,19 @@ body
     background-image: url('/bg1.jpg')
     background-position: top
   &.inside
-    background-image: url('/bg3.jpg')
+    //background-image: url('/bg3.jpg')
+    background-image: url('http://famouswonders.com/wp-content/uploads/2009/01/the-great-wall-of-china-beautiful-stretch-with-no-tourists.jpg')
     background-position: center top
+    background-size: 100%
   &.about
     background-image: url('/bg2.jpg')
     background-position: right top
-
+  &.why
+    background-image: url('/assets/why.jpg')
+  &.order
+    background-image: url('/assets/order.jpg')
+    .hero-unit.ohmyhero.order
+      background-color: rgba(240,240,240,0.9)
 @media (min-width: 979px)
   body
     padding-top: 96px
@@ -154,6 +161,10 @@ body
               color: #C90035
     &.inside
       .inside1
+        font-size: 18px
+        line-height: 20px
+        h3
+          line-height: 30px
       .insidehead
         h1
           .top
@@ -161,33 +172,68 @@ body
           .bot
             color: #C90035
           .chi-top
-            font-size: 68px
+            font-size: 52px
           .chi-bot
             font-size: 83px
             color: #C90035
     &.why
       .why1
       .why2
+      .chinese-head
+        font-size: 19px
       .whyhead
         h1
+          font-size: 50px
           .top
             font-size: 65px
           .bot
             font-size: 55px
             color: #C90035
           .chi
-            font-size: 80px
+            font-size: 70px
             color: #C90035
     &.order
       .orderhead
         h1
-          font-size: 45px
+          font-size: 40px
           .top
-            font-size: 40px
+            font-size: 38px
           .bot
-            font-size: 52px
+            font-size: 50px
             color: #C90035
-
+      .chi-text.larger
+        h3
+          font-size: 22px !important
+.padspan
+  padding: 15px
+.whitebg
+  background: #EEE
+  margin-top: -1px
+.row-fluid
+  &.why
+    h3, h4, h5
+      color: #C90035
+    .chinese-head
+      font-size: 23px
+      line-height: 26px
+      padding-bottom: 15px
+    ul
+      font-size: 16px
+      line-height: 20px
+    .introtext
+      font-size: 18px
+      line-height: 20px
+    .remarks
+      ul
+        li
+          font-size: 11px
+          line-height: 11px
+    .remarks-chi
+      ul
+        li
+          font-size: 13px
+          line-height: 13px
+  &.order
 .hero-unit.ohmyhero
   margin-top: -3px
   padding: 30px
