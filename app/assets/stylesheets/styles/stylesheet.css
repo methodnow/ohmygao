@@ -23,7 +23,7 @@
  */
 
 @font-face {
-	font-family: '/assets/MuseoSans500';
+	font-family: 'MuseoSans500';
 	src: url('/assets/MuseoSans_500-webfont.eot');
 	src: local('☺'), url('/assets/MuseoSans_500-webfont.woff') format('woff'), url('/assets/MuseoSans_500-webfont.ttf') format('truetype'), url('/assets/MuseoSans_500-webfont.svg#webfont2XDSeD7G') format('svg');
 	font-weight: normal;
